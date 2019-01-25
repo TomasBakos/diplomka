@@ -1,0 +1,173 @@
+body{
+	margin: 0;
+	background-color: #659DBD;
+	background-position: right top;
+	background-repeat: no-repeat;
+	background-size: 304px 110px;
+	color: #FFFFFF;
+	font-family: Verdana, Arial, sans-serif;
+}
+
+header{
+	padding: 1%;
+}
+
+header div{
+	position: absolute;
+	top: 10px;
+	right: 300px;
+	padding: 1%;
+}
+
+nav{
+	background-color: #DAAD86;
+	position: relative;
+}
+
+nav div{
+	display: inline-block;
+	position: absolute;
+	right: 20px;
+	bottom: 0px;
+}
+
+nav a{
+	color: black;
+	text-decoration: none;
+	font-weight: bold;
+	padding: 0.5em;
+	display: inline-block;
+}
+
+section{
+	min-height: 13em;
+	margin-top: 1%;
+	padding-top: 0;
+	padding-bottom: 1%;
+	padding-left: 1%;
+	position: relative;
+}
+
+section a{
+	color: #DAAD50;
+  font-weight: bold;
+	text-decoration: none;
+}
+
+section h1{
+	text-decoration: underline;
+}
+
+section a:hover{
+	text-decoration: underline;
+}
+
+section a:focus{
+	outline-color: #cfc05b;
+}
+
+section table{
+	border-style: solid;
+	border-color: #c88945;
+	border-width: 5px;
+	border-spacing: 5px;
+	width: 60%;
+}
+
+aside{
+	padding-left: 0.5%;
+	padding-right: 0.5%;
+	position: absolute;
+	right: 20px;
+	bottom: 10px;
+	width: 35%;
+	background-color: #cfc05b;
+	color: black;
+}
+
+td,th{
+	border-style: solid;
+}
+
+nav a:hover{
+	background-color: #BC986A;
+}
+
+nav a:focus{
+	outline-color: #BC986A;
+}
+
+footer{
+	color: black;
+	background-color: #DAAD86;
+	padding-left: 1%;
+	font-size: 95%;
+	clear: both;
+	position: relative;
+}
+
+footer div{
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	bottom: 0px;
+}
+
+footer a{
+	color: black;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+footer a:hover{
+	background-color: #cfc05b;
+}
+
+footer p{
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+}
+
+form{
+	position: relative;
+	width: 14em;
+}
+
+input{
+	position: absolute;
+	right: 0;
+}
+
+input:focus{
+	outline-color: #cfc05b;
+}
+
+header div form button{
+	background-color: #c88945;
+	border: none;
+	font-size: 14px;
+}
+
+header div form button:hover{
+	background-color: #cfc05b;
+}
+
+header div form button:focus{
+	outline-color: #cfc05b;
+}
+
+.center{
+	text-align: center;
+}
+
+.right{
+	position: absolute;
+	display: inline-block;
+	right: 1%;
+	top: 0;
+}
+
+.tucne{
+	font-weight: bold;
+}
