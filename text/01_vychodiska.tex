@@ -1,6 +1,6 @@
 Táto kapitola slúži na popísanie teórie, poznatkov a metód, ktorými sme sa inšpirovali alebo nám pomohli pri vypracovávaní témy zadania.
 \section{CRISP-DM}
-CRISP-DM je metodológia pre vyjadrenie životného cyklu získavania dát, ktorý bol vytvorený konzorciom NCR, SPSS a Daimler-Benz. Tento formát definuje hierarchiu skladajúcu sa z hlavných fáz, bežných i špecializovaných úkonov až po inštancie procesu. Hlavnými fázami tejto metodológie sú:\par
+CRISP-DM \cite{crisp-dm} je metodológia pre vyjadrenie životného cyklu získavania dát, ktorý bol vytvorený konzorciom NCR, SPSS a Daimler-Benz \cite{handbook}. Tento formát definuje hierarchiu skladajúcu sa z hlavných fáz, bežných i špecializovaných úkonov až po inštancie procesu. Hlavnými fázami tejto metodológie sú:\par
 \begin{enumerate}
   \item Porozumenie cieľom z businesového hľadiska - určenie cieľov získavania dát, zistenie potrebných okolností vo firme, špecifikácia.
   \item Porozumenie dátam - získanie a integrácia potrebných dát
@@ -13,7 +13,7 @@ Tieto fázy znázorňuje obrázok \ref{img:crisp-dm}. Postupnosť týchto fáz n
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.6]{img/crisp-dm.png}
-		\caption{Fázy formátu CRISP-DM}
+		\caption{Fázy metodológie CRISP-DM \cite{crisp-dm}}
 		\label{img:crisp-dm}
 	\end{center}
 \end{figure}
@@ -46,7 +46,7 @@ Na obrázku \ref{img:bez_ucitela} môžeme sledovať taxonómiu učenia bez uči
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.6]{img/tax_bez_ucitela.png}
-		\caption{Taxonómia techník učenia bez učiteľa}
+		\caption{Taxonómia techník učenia bez učiteľa \cite{unsupervised}}
 		\label{img:bez_ucitela}
 	\end{center}
 \end{figure}
@@ -58,7 +58,7 @@ V našej práci z týchto techník budeme hlavne využívať algoritmy hierarchi
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.55]{img/tax_zhluk.png}
-		\caption{Taxonómia techník zhlukovania dát}
+		\caption{Taxonómia techník zhlukovania dát \cite{unsupervised}}
 		\label{img:zhluk}
 	\end{center}
 \end{figure}
@@ -102,15 +102,15 @@ Rozhodovanie stromy sú stromy, ktoré klasifikujú príklady pomocou utriedenia
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.5]{img/decision_tree.png}
-		\caption{Príklad jednoduchého rozhodovacieho stromu.}
+		\caption{Príklad jednoduchého rozhodovacieho stromu. \cite{class_review}}
 		\label{img:decision_tree}
 	\end{center}
 \end{figure}
 Ako príklad použijeme rozhodovací strom z obrázku \ref{img:decision_tree}, kde vstupom by bol príklad kde at1 = a1, at2 = b2, at3 = a3 a at4 = a4, algoritmus by zaradil tento príklad postupne do vrcholov at1, at2 a nakonieco do at3 kde by klasifikoval tento príklad ako pozitívny (reprezentovaný hodnotou ``Yes``). Problém zkonštruovania optimálneho rozhodovacieho stromu je NP-úplný problém a preto teoretici hľadali efektívnu heuristiku na zkonštruovanie skoro optimálnych rozhodovacích stromov.\par
-Atribút, ktorý najlepšie rozdeluje trénovacie dáta sa nachádza v koreni stromu. Existuje veľa metód na hladanie atribútu, ktorý najlepšie rozdeľuje trénovacie dáta ale väčšina štúdií dospelo k názoru, že neexistuje jedna najlepšia metóda\cite{decision_trees}. Napriek tomu porovnanie individuálnych metód môže byť dôležité pri rozhodovaní, ktorú metriku chceme použiť pre danú dátovú množinu. Rovnaký postup sa potom opakuje na každej časti rozdelených dát a tým sa vytvárajú podstromy až pokým sa trénovacie dáta nerozdelia do podmnožiny z rovnakej triedy.\par
+Atribút, ktorý najlepšie rozdeluje trénovacie dáta sa nachádza v koreni stromu. Existuje veľa metód na hladanie atribútu, ktorý najlepšie rozdeľuje trénovacie dáta ale väčšina štúdií dospelo k názoru, že neexistuje jedna najlepšia metóda \cite{decision_trees}. Napriek tomu porovnanie individuálnych metód môže byť dôležité pri rozhodovaní, ktorú metriku chceme použiť pre danú dátovú množinu. Rovnaký postup sa potom opakuje na každej časti rozdelených dát a tým sa vytvárajú podstromy až pokým sa trénovacie dáta nerozdelia do podmnožiny z rovnakej triedy.\par
 Rozhodovacie stromy sami o sebe nie sú až tak silným nástrojom strojového učenia ale ich jednou z najväčších výhod je to, že proces rozhodovanie je dobre čitateľný aj pre netechnického ľudského používateľa.
 \subsection{Náhodné lesy}
-Náhodné lesy sú populárnym a veľmi efektívnym algoritmom založeným na spojení myšlienok z viacerých modelov, ktorý sa používa na klasifikačné ako aj na regresné problémy. Po prvý krát bol predložený Breimanom \cite{8}.\par
+Náhodné lesy sú populárnym a veľmi efektívnym algoritmom založeným na spojení myšlienok z viacerých modelov, ktorý sa používa na klasifikačné ako aj na regresné problémy. Po prvý krát bol predložený Breimanom \cite{Breiman2001}.\par
 Algoritmus náhodných lesov je spojením ideí rozhodovacích stromov a tzv. vrecovania (Bagging). Idea vrecovania sa využíva na náhodnu selekciu atribútov podľa ktorej sa vytvorí množstvo rozhodovacích stromov z kontrolovanou varianciou. Každý rozhodovací strom v tomto modele vystupuje ako základný klasifikátor na určenie triedy daného príkladu. Potom ako každý strom samostatne klasifikuje daný príklad výsledná klasifikovaná trieda sa predikuje pomocou väčšinového hlasovania jednotlivých zakladných rozhodovacích stromov.
 Obrázok \ref{img:rf_workflow} ilustruje spôsob fungovania algoritmu náhodných lesov a proces algoritmu je interpretovaný nasledovne:
 \begin{enumerate}
@@ -132,7 +132,7 @@ V prípade kedy sú dáta lineárne separovateľné, potom ako algoritmus nájde
 \begin{figure}[H]
 	\begin{center}
 		\includegraphics[scale=0.3]{img/svm.png}
-		\caption{Ukážka algoritmu SVM.}
+		\caption{Ukážka algoritmu SVM. \cite{class_review}}
 		\label{img:svm}
 	\end{center}
 \end{figure}
